@@ -17,7 +17,6 @@ The script can calculate SL for multiple timesereis dataset in parallel. For the
 | `mts_data`    | Multivariate Time Series Data [List format]| 
 | `num_trends`    | Number of hidden trends in SSM   |  
 | `rolling_window_size`        | Length of rolling window [hours]|
-|`avg_window_size`        |  Length of moving average window [hours]|
 |`bin_size`        |  Length of intervals between time points [minutes]|
 |`num_cores`        |  Number of cores for parallel camputing|
 
@@ -28,7 +27,6 @@ result = computeSL(
               mts_data = ICU_data, 
               num_trends = 3,
               rolling_window_size = 18,
-              avg_window_size = 3,
               bin_size = 30,
               num_cores = 10
               )
@@ -36,7 +34,7 @@ result = computeSL(
 
 **OS Compatibility**
 
-TROSS has been tested in the MacOS.
+SL-MTS has been tested in the MacOS.
 
 **Dependencies**
 
@@ -45,14 +43,16 @@ The following softwares need to be pre-installed before before running this prog
 1. 
   * [R 3.5 ](https://cran.r-project.org/bin/windows/base/)
 2. R packages:
-  * [KFAS](https://cran.r-project.org/web/packages/KFAS/)
+  * [MARSS](https://cran.r-project.org/web/packages/MARSS/)
+  * [parallel](https://www.rdocumentation.org/packages/parallel/versions/3.5.1)
+  * [pracma](https://cran.r-project.org/web/packages/pracma/)
 
 **License**
 
-TROSS is an open source software and is licensed under LGPL.
+SL-MTS is an open source software and is licensed under LGPL.
 
 **Getting help**
 
-For queries regarding the software write to: samal@aices.rwth-aachen.de / krishnan@aices.rwth-aachen.de
+For queries regarding the software write to: farhadi@combine.rwth-aachen
 
 **Citing TROSS**
