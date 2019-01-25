@@ -2,15 +2,15 @@
 
 SL-MTS is a script implemented in R for studying the transitions in multivariate time series data (MTS). The script uses 
 State Space Model (SSM) to model the dynamics of MTS and determine points in the time series where the error in the
-forecast of SSM model (i.e. out-sample error) is worse than the its in-sample performance, where the performance is measured
-for a fixed loss function in a rolling window manner. The error is called Surprise Loss (SL). Relatievley High SLs can be an indicator of transition in the system. 
-The script is implemented on Intensive Vare Unit (ICU) tiem series data for studying the transition to Septic shock in ICU setting.
+forecast of SSM model (i.e. out-sample error) is worse than its in-sample performance, where the performance is measured
+for a fixed loss function in a rolling window manner. The error is called Surprise Loss (SL)<sup>1</sup>. Relatively High SLs can be an indicator of transition in the system. 
+The script is implemented on Intensive Care Unit (ICU) MTS data for studying the transition to Septic shock in the ICU setting.
 
+<sup>1</sup> Giacomini, R., & Rossi, B. (2009). Detecting and predicting forecast breakdowns. Review of Economic Studies, 76(2), 669–705.
 
 **How do I use SL-MTS?**
 
-The Multivariate Time series data must be in form of datframe, where rows or equally spaced time points and columns are variables. 
-The script can calculate SL for multiple timesereis dataset in parallel. For the purpose, the data must be feeded to the model in a list format, where each component of the list is a dataframe. In each dataframe rows are equally spaced time points and columns are variables.
+The input data format is a list, where each component of the list is multivariate time series in form of a data-frame (e.g. data pertaining to a single patient). The rows and columns of this data-frame denote equally spaced time points and variables respectively. The calculation of SL can be parallelized over multiple cores as well.
 
 | Arguments        |           |
 | ------------- |:-------------:| 
@@ -18,7 +18,7 @@ The script can calculate SL for multiple timesereis dataset in parallel. For the
 | `num_trends`    | Number of hidden trends in SSM   |  
 | `rolling_window_size`        | Length of rolling window [hours]|
 |`bin_size`        |  Length of intervals between time points [minutes]|
-|`num_cores`        |  Number of cores for parallel camputing|
+|`num_cores`        |  Number of cores for parallel computing|
 
 
 **Examples**
@@ -55,4 +55,8 @@ SL-MTS is an open source software and is licensed under LGPL.
 
 For queries regarding the software write to: samal@combine.rwth-aachen.de , farhadi@combine.rwth-aachen
 
-**Citing TROSS**
+**Citing SL-MTS**
+
+
+
+
