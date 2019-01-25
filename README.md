@@ -53,6 +53,6 @@ SL-MTS is an open source software and is licensed under LGPL.
 
 **Getting help**
 
-For queries regarding the software write to: farhadi@combine.rwth-aachen
+For queries regarding the software write to: samal@combine.rwth-aachen.de , farhadi@combine.rwth-aachen
 
 **Citing TROSS**
