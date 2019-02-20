@@ -56,7 +56,7 @@ computeSL = function(mts_data_list, num_trends = 3, rolling_window_size = 18, bi
         predicted_out_fit <- predicted_out_fit*scaled_scale+scaled_center
         predicted_out_lwr <- predicted_out_lwr*scaled_scale+scaled_center
         predicted_out_upr <- predicted_out_upr*scaled_scale+scaled_center
-        actual_out <- x[i+1,]
+        actual_out <- z_scaled_data[i+1,]
         
         predicted_in <- predict(kfasModel, interval = 'prediction', level=0.95)
         predicted_in_fit <- sapply(predicted_in, function(z) z[,1])
